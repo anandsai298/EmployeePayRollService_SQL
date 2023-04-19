@@ -1,14 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Data.SqlTypes;
+
 namespace EmployeePayRollService;
 class Program
 {
     static void Main(string[] args)
     {
         Operations operation = new Operations();
-        operation.GetALLEmployeePayRollRecords();
-        /*EmployeeDetails details = new EmployeeDetails()
-        {
+        //operation.GetALLEmployeePayRollRecords();
+        EmployeeDetails details = new EmployeeDetails();
+        /*{
             EmployeeName = "Arjun",
             EmployeeSalary = 20000,
             StartDate = DateTime.Now,
@@ -23,5 +25,7 @@ class Program
         };
         operation.AddEmployee(details);
         //operation.DeleteEmployee(id);*/
+        operation.UpdateEmployee(4, "Anand");
+
     }
 }

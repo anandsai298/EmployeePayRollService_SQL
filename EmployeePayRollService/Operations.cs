@@ -10,7 +10,7 @@ namespace EmployeePayRollService
 {
     public class Operations
     {
-        public static string Connectingstring = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EmployeePayRoll; Integrated Security=true";
+        public static string Connectingstring = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EmployeePayRoll";
         SqlConnection connection = new SqlConnection(Connectingstring);
         public void GetALLEmployeePayRollRecords()
         {
@@ -31,7 +31,7 @@ namespace EmployeePayRollService
                             employeeDetails.EmployeeId = reader.GetInt32(0);
                             employeeDetails.EmployeeName = reader.GetString(1);
                             employeeDetails.EmployeeSalary = (int)reader.GetInt64(2);
-                            employeeDetails.StartDate = reader.GetDateTime(3);
+                            employeeDetails.StartDate = reader.GetDateTime(3); 
                             employeeDetails.Gender = reader.GetString(4);
                             employeeDetails.EmployeePhNo = reader.GetString(5);
                             employeeDetails.Address = reader.GetString(6);
@@ -58,7 +58,7 @@ namespace EmployeePayRollService
                 this.connection.Close();
             }
         }
-        /*public void AddEmployee(EmployeeDetails employee)
+        public void AddEmployee(EmployeeDetails employee)
         {
             try
             {
@@ -106,7 +106,6 @@ namespace EmployeePayRollService
         {
             try
             {
-                EmployeeDetails employeeDetails = new EmployeeDetails();
                 using (this.connection)
                 {
                     SqlCommand cmd = new SqlCommand("DeleteEmployee", this.connection);
@@ -130,7 +129,6 @@ namespace EmployeePayRollService
         {
             try
             {
-                EmployeeDetails employeeDetails = new EmployeeDetails();
                 using (this.connection)
                 {
                     SqlCommand cmd = new SqlCommand("UpdateEmployee", this.connection);
@@ -151,6 +149,6 @@ namespace EmployeePayRollService
             {
                 throw new Exception(ex.Message);
             }
-        }*/
+        }
     }
 }

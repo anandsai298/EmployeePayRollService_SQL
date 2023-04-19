@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmployeePayRollService
+{
+    public class EmployeeDetails
+    {
+        public int EmployeeId { get; set; }
+        public string EmployeeName { get; set; }
+        public int EmployeeSalary { get; set; }
+        public DateTime StartDate { get; set; }
+        public string Gender { get; set; }
+        public string EmployeePhNo { get; set; }
+        public string Address { get; set; }
+        public int BasicPay { get; set; }
+        public int Deductions { get; set; }
+        public int TaxPayable { get; set; }
+        public int IncomeTax { get; set; }
+        public int NetPay { get; set; }
+    }
+}

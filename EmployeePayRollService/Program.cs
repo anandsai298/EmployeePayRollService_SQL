@@ -6,8 +6,8 @@ class Program
     static void Main(string[] args)
     {
         Operations operation = new Operations();
-        //operation.GetALLEmployeePayRollRecords();
-        EmployeeDetails details = new EmployeeDetails()
+        operation.GetALLEmployeePayRollRecords();
+        /*EmployeeDetails details = new EmployeeDetails()
         {
             EmployeeName = "Arjun",
             EmployeeSalary = 20000,
@@ -22,6 +22,6 @@ class Program
             NetPay = 10000,
         };
         operation.AddEmployee(details);
-        //operation.DeleteEmployee(id);
+        //operation.DeleteEmployee(id);*/
     }
 }

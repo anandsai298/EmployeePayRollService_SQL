@@ -7,7 +7,7 @@ Create table Employee_PayRoll(
 EmployeeId int identity(1,1) Primary Key, 
 EmployeeName Varchar(255),
 EmployeeSalary Bigint,
-StartDate Date,
+StartDate DateTime,
 );
 
 --UC3
@@ -80,5 +80,46 @@ insert into Department(DeptName,EmpID)values('Sales',1);
 insert into Department(DeptName,EmpID)values('Marketing',1);
 
 select * from Department where EmpID=1;
+
+--UC11-Storedprocedure
+Create Procedure AddEmployee
+(
+@EmployeeName varchar(30),
+@EmployeeSalary Bigint,
+@StartDate Date,
+@Gender varchar(1),
+@EmployeePhNo varchar(10),
+@Address varchar(100),
+@BasicPay Bigint,
+@Deductions Bigint,
+@TaxPayable Bigint,
+@IncomeTax Bigint,
+@NetPay Bigint
+)
+As
+Begin
+insert into Employee_PayRoll values(@EmployeeName,@EmployeeSalary,@StartDate,@Gender,@EmployeePhNo,@Address,@BasicPay,@Deductions,@TaxPayable,@IncomeTax,@NetPay);
+End
+
+--UC12-Delete procedure
+Create Procedure DeleteEmployee
+(
+@EmployeeId int
+)
+As 
+Begin
+Delete from Employee_PayRoll where EmployeeId=@EmployeeId;
+End
+
+--UC13-Update
+Create Procedure UpdateEmployee
+(
+@EmployeeId int,
+@EmployeeName varchar(30)
+)
+As
+Begin
+Update Employee_PayRoll set EmployeeName=@EmployeeName where EmployeeId=@EmployeeId;
+End
 
 

@@ -20,5 +20,7 @@ namespace EmployeePayRollService
         public int TaxPayable { get; set; }
         public int IncomeTax { get; set; }
         public int NetPay { get; set; }
+        public string DeptName { get; set; }
+        public int EmpID { get; set; }
     }
 }

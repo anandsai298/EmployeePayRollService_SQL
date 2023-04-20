@@ -24,8 +24,8 @@ class Program
             NetPay = 10000,
         };
         operation.AddEmployee(employeeDetails);*/
-        operation.DeleteEmployee(11);
-        //operation.UpdateEmployee(4, "Anand");
+        //operation.DeleteEmployee(11);
+        operation.UpdateEmployee(1, "AnandSaiKumar");
 
     }
 }

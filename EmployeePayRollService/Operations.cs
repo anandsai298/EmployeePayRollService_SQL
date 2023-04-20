@@ -58,11 +58,10 @@ namespace EmployeePayRollService
                 this.connection.Close();
             }
         }
-        public void AddEmployee(EmployeeDetails employee)
+        public void AddEmployee(EmployeeDetails employeeDetails)
         {
             try
             {
-                EmployeeDetails employeeDetails = new EmployeeDetails();
                 using (this.connection)
                 {
                     SqlCommand cmd = new SqlCommand("AddEmployee", this.connection);

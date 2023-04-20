@@ -9,22 +9,22 @@ class Program
     {
         Operations operation = new Operations();
         //operation.GetALLEmployeePayRollRecords();
-        EmployeeDetails employeeDetails = new EmployeeDetails()
+        /*EmployeeDetails employeeDetails = new EmployeeDetails()
        {
-            EmployeeName = "Arjun",
+            EmployeeName = "Gowthami",
             EmployeeSalary = 20000,
             StartDate = DateTime.Now,
-            Gender = "M",
-            EmployeePhNo = "7418529637",
-            Address = "Vizag",
+            Gender = "F",
+            EmployeePhNo = "7845129856",
+            Address = "Nellore",
             BasicPay =1000,
             Deductions = 2000,
             TaxPayable = 3000,
             IncomeTax = 4000,
             NetPay = 10000,
         };
-        operation.AddEmployee(employeeDetails);
-        //operation.DeleteEmployee(id);
+        operation.AddEmployee(employeeDetails);*/
+        operation.DeleteEmployee(11);
         //operation.UpdateEmployee(4, "Anand");
 
     }

@@ -9,8 +9,8 @@ class Program
     {
         Operations operation = new Operations();
         //operation.GetALLEmployeePayRollRecords();
-        EmployeeDetails details = new EmployeeDetails();
-        /*{
+        EmployeeDetails employeeDetails = new EmployeeDetails()
+       {
             EmployeeName = "Arjun",
             EmployeeSalary = 20000,
             StartDate = DateTime.Now,
@@ -23,9 +23,9 @@ class Program
             IncomeTax = 4000,
             NetPay = 10000,
         };
-        operation.AddEmployee(details);
-        //operation.DeleteEmployee(id);*/
-        operation.UpdateEmployee(4, "Anand");
+        operation.AddEmployee(employeeDetails);
+        //operation.DeleteEmployee(id);
+        //operation.UpdateEmployee(4, "Anand");
 
     }
 }

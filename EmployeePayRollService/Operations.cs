@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -148,6 +149,20 @@ namespace EmployeePayRollService
             {
                 throw new Exception(ex.Message);
             }
+        }
+        public List<EmployeeDetails> emplist=new List<EmployeeDetails>();
+        public void AddEmployeeToPayRoll(List<EmployeeDetails> emplist)
+        {
+            emplist.ForEach(EmployeeData =>
+            {
+                Console.WriteLine("Employee is adding to list :" + EmployeeData.EmployeeName);
+                this.AddEmployees(EmployeeData);
+                Console.WriteLine("Employee has added :" + EmployeeData.EmployeeName);
+            });
+        }
+        public void AddEmployees(EmployeeDetails Employee)
+        {
+            emplist.Add(Employee);
         }
     }
 }

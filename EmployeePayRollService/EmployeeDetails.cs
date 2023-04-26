@@ -22,5 +22,37 @@ namespace EmployeePayRollService
         public int NetPay { get; set; }
         public string DeptName { get; set; }
         public int EmpID { get; set; }
+    
+        public EmployeeDetails(int EmployeeId, string EmployeeName, int EmployeeSalary, DateTime StartDate, string Gender, string EmployeePhNo, string Address, int BasicPay, int Deductions, int TaxPayable, int IncomeTax, int NetPay)
+        {
+            this.EmployeeId = EmployeeId;
+            this.EmployeeName = EmployeeName;
+            this.EmployeeSalary = EmployeeSalary;
+            this.StartDate = StartDate;
+            this.Gender = Gender;
+            this.EmployeePhNo = EmployeePhNo;
+            this.Address = Address;
+            this.BasicPay = BasicPay;
+            this.Deductions = Deductions;
+            this.TaxPayable = TaxPayable;
+            this.IncomeTax = IncomeTax;
+            this.NetPay = NetPay;
+        }
+
+        public EmployeeDetails()
+        {
+            this.EmployeeId = EmployeeId;
+            this.EmployeeName = EmployeeName;
+            this.EmployeeSalary = EmployeeSalary;
+            this.StartDate = StartDate;
+            this.Gender = Gender;
+            this.EmployeePhNo = EmployeePhNo;
+            this.Address = Address;
+            this.BasicPay = BasicPay;
+            this.Deductions = Deductions;
+            this.TaxPayable = TaxPayable;
+            this.IncomeTax = IncomeTax;
+            this.NetPay = NetPay;
+        }
     }
 }

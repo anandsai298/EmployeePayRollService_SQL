@@ -23,6 +23,12 @@ namespace EmployeePayRollTest
             operations.AddEmployeeToPayRoll(list);
             DateTime StopDateTime = DateTime.Now;
             Console.WriteLine("Duration without threads: " + (StartDateTime - StopDateTime));
+
+            Console.WriteLine("by using thread");
+            DateTime StartDateTimeThread = DateTime.Now;
+            operations.AddEmployeeToPayRollByThread(list);
+            DateTime StopDateTimeThread = DateTime.Now;
+            Console.WriteLine("Duration with threads: " + (StartDateTime - StopDateTime));
         }
     }
 }

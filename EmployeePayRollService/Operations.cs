@@ -160,6 +160,20 @@ namespace EmployeePayRollService
                 Console.WriteLine("Employee has added :" + EmployeeData.EmployeeName);
             });
         }
+        public void AddEmployeeToPayRollByThread(List<EmployeeDetails> emplist)
+        {
+            emplist.ForEach(EmployeeData =>
+            {
+                Task thread = new Task(() =>
+                {
+                    Console.WriteLine("Employee is adding to list :" + EmployeeData.EmployeeName);
+                    this.AddEmployees(EmployeeData);
+                    Console.WriteLine("Employee has added :" + EmployeeData.EmployeeName);
+                });
+                thread.Start();
+            });
+            Console.WriteLine(this.emplist.Count);
+        }
         public void AddEmployees(EmployeeDetails Employee)
         {
             emplist.Add(Employee);
